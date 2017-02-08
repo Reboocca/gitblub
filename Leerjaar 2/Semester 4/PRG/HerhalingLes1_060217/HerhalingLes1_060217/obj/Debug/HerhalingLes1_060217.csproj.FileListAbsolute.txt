@@ -1,0 +1,10 @@
+D:\School\Leerjaar 2\Semester 4\PRG\HerhalingLes1_060217\HerhalingLes1_060217\bin\Debug\HerhalingLes1_060217.exe.config
+D:\School\Leerjaar 2\Semester 4\PRG\HerhalingLes1_060217\HerhalingLes1_060217\bin\Debug\HerhalingLes1_060217.exe
+D:\School\Leerjaar 2\Semester 4\PRG\HerhalingLes1_060217\HerhalingLes1_060217\bin\Debug\HerhalingLes1_060217.pdb
+D:\School\Leerjaar 2\Semester 4\PRG\HerhalingLes1_060217\HerhalingLes1_060217\obj\Debug\HerhalingLes1_060217.csprojResolveAssemblyReference.cache
+D:\School\Leerjaar 2\Semester 4\PRG\HerhalingLes1_060217\HerhalingLes1_060217\obj\Debug\HerhalingLes1_060217.Form1.resources
+D:\School\Leerjaar 2\Semester 4\PRG\HerhalingLes1_060217\HerhalingLes1_060217\obj\Debug\HerhalingLes1_060217.Kleur.resources
+D:\School\Leerjaar 2\Semester 4\PRG\HerhalingLes1_060217\HerhalingLes1_060217\obj\Debug\HerhalingLes1_060217.Properties.Resources.resources
+D:\School\Leerjaar 2\Semester 4\PRG\HerhalingLes1_060217\HerhalingLes1_060217\obj\Debug\HerhalingLes1_060217.csproj.GenerateResource.Cache
+D:\School\Leerjaar 2\Semester 4\PRG\HerhalingLes1_060217\HerhalingLes1_060217\obj\Debug\HerhalingLes1_060217.exe
+D:\School\Leerjaar 2\Semester 4\PRG\HerhalingLes1_060217\HerhalingLes1_060217\obj\Debug\HerhalingLes1_060217.pdb

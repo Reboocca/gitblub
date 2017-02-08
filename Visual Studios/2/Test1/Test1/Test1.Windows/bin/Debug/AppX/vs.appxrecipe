@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>REBECCA</Machine>
+    <WindowsUser>Rebecca</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows 8.1</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>ba64c9c2-0c2a-465b-a9b6-d8e4fe2bde51</PackageIdentityName>
+    <PackageIdentityPublisher>CN=Rebecca</PackageIdentityPublisher>
+    <IntermediateOutputPath>D:\School\2\Test1\Test1\Test1.Windows\obj\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType>
+    </RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <RegisteredManifestChecksum>D7131078609B5EF950158544B80BEE9E99A704F267258E7379D5BA87E9A93A28</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>ba64c9c2-0c2a-465b-a9b6-d8e4fe2bde51_1.0.0.0_neutral__brj6x21e721n4</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>ba64c9c2-0c2a-465b-a9b6-d8e4fe2bde51_brj6x21e721n4!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>ba64c9c2-0c2a-465b-a9b6-d8e4fe2bde51</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Rebecca</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\School\2\Test1\Test1\Test1.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-02-07T11:40:23.965</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\School\2\Test1\Test1\Test1.Windows\bin\Debug\Test1.Windows.exe">
+      <PackagePath>Test1.Windows.exe</PackagePath>
+      <Modified>2017-02-07T11:40:22.217</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\School\2\Test1\Test1\Test1.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-06T21:01:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\School\2\Test1\Test1\Test1.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-06T21:01:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\School\2\Test1\Test1\Test1.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-06T21:01:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\School\2\Test1\Test1\Test1.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-06T21:01:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\School\2\Test1\Test1\Test1.Windows\bin\Debug\Test1.Windows.xr.xml">
+      <PackagePath>Test1.Windows.xr.xml</PackagePath>
+      <Modified>2017-02-07T11:40:21.119</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\School\2\Test1\Test1\Test1.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2017-02-07T11:40:21.494</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\School\2\Test1\Test1\Test1.Windows\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2017-02-07T11:40:21.497</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\School\2\Test1\Test1\Test1.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2017-02-07T11:40:22.790</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
