@@ -6,14 +6,14 @@
         xmlns:local="clr-namespace:GreyhoundRace"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="1000">
-    <Grid>
+    <Grid RenderTransformOrigin="0.495,0.475">
         <Grid.Background>
             <ImageBrush ImageSource="Images/hanamura-screenshot-004.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         <Grid Margin="50,60,50,48" Background="#A5FFFFFF">
             <Label x:Name="label" Content="The almighty race of bromance" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="38" Foreground="#FF664040" Width="872"/>
             <Label x:Name="label_Copy" Content="Who will get to Roadhog first? c;" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="18" Foreground="#FF664040" Width="872"/>
-            <Button x:Name="btStart" Content="Start" HorizontalAlignment="Left" Margin="730,391,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="18" Foreground="White" Width="134" Height="42" RenderTransformOrigin="0.529,1.37">
+            <Button x:Name="btStart" Content="Start" HorizontalAlignment="Left" Margin="730,391,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="18" Foreground="White" Width="134" Height="42" RenderTransformOrigin="0.529,1.37" Click="btStart_Click">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="#FFA65740"/>
@@ -43,19 +43,34 @@
                 </Grid.RowDefinitions>
                 <Rectangle Fill="#00FFCF4E" Grid.Row="3" Stroke="#FF3E3E3E"/>
                 <Rectangle Fill="#7FFF0017" HorizontalAlignment="Right" Grid.RowSpan="4" Stroke="#00CDA3A3" Width="82.5"/>
-                <Image x:Name="image" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="61" Source="Images/JunkfatTRANS.png" Grid.Row="3" Margin="10,0,0,0"/>
-                <Image x:Name="image_Copy" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="61" Source="Images/JunkfatTRANS.png" Grid.Row="2" Margin="10,0,0,0"/>
-                <Image x:Name="image_Copy1" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="61" Source="Images/JunkfatTRANS.png" Grid.Row="1" Margin="10,0,0,0"/>
-                <Image x:Name="image_Copy2" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="61" Source="Images/JunkfatTRANS.png" Margin="10,0,0,0"/>
-                <Image x:Name="image_Copy3" HorizontalAlignment="Right" Height="60" VerticalAlignment="Top" Width="61" Source="Images/RoadfogTRANS.png" Grid.Row="3" RenderTransformOrigin="0.221,0.525" Margin="0,0,10,0"/>
-                <Image x:Name="image_Copy4" HorizontalAlignment="Right" Height="60" VerticalAlignment="Top" Width="61" Source="Images/RoadfogTRANS.png" Grid.Row="2" Margin="0,0,10,0"/>
-                <Image x:Name="image_Copy5" HorizontalAlignment="Right" Height="60" VerticalAlignment="Top" Width="61" Source="Images/RoadfogTRANS.png" Grid.Row="1" Margin="0,0,10,0"/>
-                <Image x:Name="image_Copy6" HorizontalAlignment="Right" Height="60" VerticalAlignment="Top" Width="61" Source="Images/RoadfogTRANS.png" RenderTransformOrigin="0.484,0.55" Margin="0,0,10,0"/>
+                <Image x:Name="Roadhog4" HorizontalAlignment="Right" Height="60" VerticalAlignment="Top" Width="61" Source="Images/RoadfogTRANS.png" Grid.Row="3" RenderTransformOrigin="0.221,0.525" Margin="0,0,10,0"/>
+                <Image x:Name="Roadhog3" HorizontalAlignment="Right" Height="60" VerticalAlignment="Top" Width="61" Source="Images/RoadfogTRANS.png" Grid.Row="2" Margin="0,0,10,0"/>
+                <Image x:Name="Roadhog2" HorizontalAlignment="Right" Height="60" VerticalAlignment="Top" Width="61" Source="Images/RoadfogTRANS.png" Grid.Row="1" Margin="0,0,10,0"/>
+                <Image x:Name="Roadhog1" HorizontalAlignment="Right" Height="60" VerticalAlignment="Top" Width="61" Source="Images/RoadfogTRANS.png" RenderTransformOrigin="0.484,0.55" Margin="0,0,10,0"/>
                 <Rectangle Fill="#00FFCF4E" Grid.Row="2" Stroke="#FF3E3E3E" Margin="0,0,0,-1.5"/>
                 <Rectangle Fill="#00FFCF4E" Grid.Row="1" Stroke="#FF3E3E3E" Margin="0,0,0,-1.125"/>
                 <Rectangle Fill="#00FFCF4E" Stroke="#FF3E3E3E" Margin="0,0,0,-0.938"/>
+                <Canvas x:Name="cv_Junkrat1" HorizontalAlignment="Left" Margin="10,0.938,0,-0.938" Width="61" RenderTransformOrigin="3.005,2.316">
+                    <Canvas.Background>
+                        <ImageBrush ImageSource="Images/JunkfatTRANS.png" Stretch="UniformToFill"/>
+                    </Canvas.Background>
+                </Canvas>
+                <Canvas x:Name="cv_Junkrat2" HorizontalAlignment="Left" Margin="10,1.125,0,-1.125" Width="61" RenderTransformOrigin="3.005,2.316" Grid.Row="1">
+                    <Canvas.Background>
+                        <ImageBrush ImageSource="Images/JunkfatTRANS.png" Stretch="UniformToFill"/>
+                    </Canvas.Background>
+                </Canvas>
+                <Canvas x:Name="cv_Junkrat3" HorizontalAlignment="Left" Margin="10,1.125,0,-1.125" Width="61" RenderTransformOrigin="3.005,2.316" Grid.Row="2">
+                    <Canvas.Background>
+                        <ImageBrush ImageSource="Images/JunkfatTRANS.png" Stretch="UniformToFill"/>
+                    </Canvas.Background>
+                </Canvas>
+                <Canvas x:Name="cv_Junkrat4" HorizontalAlignment="Left" Margin="10,0,0,0" Width="61" RenderTransformOrigin="3.005,2.316" Grid.Row="3">
+                    <Canvas.Background>
+                        <ImageBrush ImageSource="Images/JunkfatTRANS.png" Stretch="UniformToFill"/>
+                    </Canvas.Background>
+                </Canvas>
             </Grid>
         </Grid>
-
     </Grid>
 </Window>
