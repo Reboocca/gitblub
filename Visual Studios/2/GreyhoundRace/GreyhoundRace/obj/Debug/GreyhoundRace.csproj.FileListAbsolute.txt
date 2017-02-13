@@ -26,3 +26,17 @@ W:\School\Gitblub\gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\obj\Debug
 W:\School\Gitblub\gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\obj\Debug\GreyhoundRace.g.resources
 W:\School\Gitblub\gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\obj\Debug\GreyhoundRace.Properties.Resources.resources
 W:\School\Gitblub\gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\obj\Debug\GreyhoundRace.csproj.GenerateResource.Cache
+D:\School\Gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\bin\Debug\GreyhoundRace.exe.config
+D:\School\Gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\bin\Debug\GreyhoundRace.exe
+D:\School\Gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\bin\Debug\GreyhoundRace.pdb
+D:\School\Gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\obj\Debug\GreyhoundRace.csprojResolveAssemblyReference.cache
+D:\School\Gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\obj\Debug\MainWindow.g.cs
+D:\School\Gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\obj\Debug\App.g.cs
+D:\School\Gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\obj\Debug\GreyhoundRace_MarkupCompile.cache
+D:\School\Gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\obj\Debug\GreyhoundRace_MarkupCompile.lref
+D:\School\Gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\obj\Debug\MainWindow.baml
+D:\School\Gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\obj\Debug\GreyhoundRace.g.resources
+D:\School\Gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\obj\Debug\GreyhoundRace.Properties.Resources.resources
+D:\School\Gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\obj\Debug\GreyhoundRace.csproj.GenerateResource.Cache
+D:\School\Gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\obj\Debug\GreyhoundRace.exe
+D:\School\Gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\obj\Debug\GreyhoundRace.pdb

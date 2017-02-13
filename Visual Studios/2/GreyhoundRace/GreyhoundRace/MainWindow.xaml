@@ -42,7 +42,7 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Rectangle Fill="#00FFCF4E" Grid.Row="3" Stroke="#FF3E3E3E"/>
-                <Rectangle Fill="#7FFF0017" HorizontalAlignment="Right" Grid.RowSpan="4" Stroke="#00CDA3A3" Width="82.5"/>
+                <Rectangle HorizontalAlignment="Right" Grid.RowSpan="4" Stroke="#7FE81D1D" Width="82.5"/>
                 <Image x:Name="Roadhog4" HorizontalAlignment="Right" Height="60" VerticalAlignment="Top" Width="61" Source="Images/RoadfogTRANS.png" Grid.Row="3" RenderTransformOrigin="0.221,0.525" Margin="0,0,10,0"/>
                 <Image x:Name="Roadhog3" HorizontalAlignment="Right" Height="60" VerticalAlignment="Top" Width="61" Source="Images/RoadfogTRANS.png" Grid.Row="2" Margin="0,0,10,0"/>
                 <Image x:Name="Roadhog2" HorizontalAlignment="Right" Height="60" VerticalAlignment="Top" Width="61" Source="Images/RoadfogTRANS.png" Grid.Row="1" Margin="0,0,10,0"/>
@@ -50,25 +50,33 @@
                 <Rectangle Fill="#00FFCF4E" Grid.Row="2" Stroke="#FF3E3E3E" Margin="0,0,0,-1.5"/>
                 <Rectangle Fill="#00FFCF4E" Grid.Row="1" Stroke="#FF3E3E3E" Margin="0,0,0,-1.125"/>
                 <Rectangle Fill="#00FFCF4E" Stroke="#FF3E3E3E" Margin="0,0,0,-0.938"/>
-                <Canvas x:Name="cv_Junkrat1" HorizontalAlignment="Left" Margin="10,0.938,0,-0.938" Width="61" RenderTransformOrigin="3.005,2.316">
-                    <Canvas.Background>
-                        <ImageBrush ImageSource="Images/JunkfatTRANS.png" Stretch="UniformToFill"/>
-                    </Canvas.Background>
+                <Canvas x:Name="cv_Junkrat1" HorizontalAlignment="Left" Margin="10,1,0,59" Width="816" RenderTransformOrigin="3.005,2.316" Grid.RowSpan="2">
+                    <Image x:Name="imJunkrat1" Height="60" Width="60" Source="Images/JunkfatTRANS.png" Stretch="UniformToFill" Canvas.Top="0" Canvas.Left="0">
+                        <Image.OpacityMask>
+                            <ImageBrush ImageSource="Images/JunkfatTRANS.png" Stretch="UniformToFill"/>
+                        </Image.OpacityMask>
+                    </Image>
                 </Canvas>
-                <Canvas x:Name="cv_Junkrat2" HorizontalAlignment="Left" Margin="10,1.125,0,-1.125" Width="61" RenderTransformOrigin="3.005,2.316" Grid.Row="1">
-                    <Canvas.Background>
-                        <ImageBrush ImageSource="Images/JunkfatTRANS.png" Stretch="UniformToFill"/>
-                    </Canvas.Background>
+                <Canvas x:Name="cv_Junkrat2" HorizontalAlignment="Left" Margin="10,1,0,59" Width="816" RenderTransformOrigin="3.005,2.316" Grid.Row="1" Grid.RowSpan="2">
+                    <Image x:Name="imJunkrat2" Height="60" Width="60" Source="Images/JunkfatTRANS.png" Stretch="UniformToFill" Canvas.Top="0" Canvas.Left="0">
+                        <Image.OpacityMask>
+                            <ImageBrush ImageSource="Images/JunkfatTRANS.png" Stretch="UniformToFill"/>
+                        </Image.OpacityMask>
+                    </Image>
                 </Canvas>
-                <Canvas x:Name="cv_Junkrat3" HorizontalAlignment="Left" Margin="10,1.125,0,-1.125" Width="61" RenderTransformOrigin="3.005,2.316" Grid.Row="2">
-                    <Canvas.Background>
-                        <ImageBrush ImageSource="Images/JunkfatTRANS.png" Stretch="UniformToFill"/>
-                    </Canvas.Background>
+                <Canvas x:Name="cv_Junkrat3" HorizontalAlignment="Left" Margin="10,1,0,59" Width="816" RenderTransformOrigin="3.005,2.316" Grid.Row="2" Grid.RowSpan="2">
+                    <Image x:Name="imJunkrat3" Height="60" Width="60" Source="Images/JunkfatTRANS.png" Stretch="UniformToFill" Canvas.Top="0" Canvas.Left="0">
+                        <Image.OpacityMask>
+                            <ImageBrush ImageSource="Images/JunkfatTRANS.png" Stretch="UniformToFill"/>
+                        </Image.OpacityMask>
+                    </Image>
                 </Canvas>
-                <Canvas x:Name="cv_Junkrat4" HorizontalAlignment="Left" Margin="10,0,0,0" Width="61" RenderTransformOrigin="3.005,2.316" Grid.Row="3">
-                    <Canvas.Background>
-                        <ImageBrush ImageSource="Images/JunkfatTRANS.png" Stretch="UniformToFill"/>
-                    </Canvas.Background>
+                <Canvas x:Name="cv_Junkrat4" HorizontalAlignment="Left" Margin="10,0,0,0" Width="816" RenderTransformOrigin="3.005,2.316" Grid.Row="3">
+                    <Image x:Name="imJunkrat4" Height="60" Width="60" Source="Images/JunkfatTRANS.png" Stretch="UniformToFill" Canvas.Top="0" Canvas.Left="0">
+                        <Image.OpacityMask>
+                            <ImageBrush ImageSource="Images/JunkfatTRANS.png" Stretch="UniformToFill"/>
+                        </Image.OpacityMask>
+                    </Image>
                 </Canvas>
             </Grid>
         </Grid>
