@@ -12,19 +12,17 @@ namespace GreyhoundRace
 {
     class Junkrat
     {
-        public int StartPosition;
-        public int Racetrack; 
-        public Canvas Junkrats = null;
+        public int Racetrack;
         public Image imJunkrat = null;
-        public int Location = 0; 
         public Random Random;
         public DispatcherTimer Timer = null;
+        public int Number;
 
         public bool Move()
         {
 
             //Make a random between 1 and 5. This will be the steps Junkrat will take
-            int move = Random.Next(1, 5);
+            int move = Random.Next(3, 8);
 
             //2. Update the position of my PictureBox on the form
             Vector vector = VisualTreeHelper.GetOffset(imJunkrat);
@@ -36,7 +34,7 @@ namespace GreyhoundRace
             //3. Return true if I won the race
             if (Punt.X >= Racetrack - 25)
             {
-                MessageBox.Show("STOP THE RACE OR JUNKRAT WILL BE LOST FOREVER");
+                MessageBox.Show("One lucky Junkrat got hooked on a feeling.", "Aaaand the winner is: Junkrat " + Number + "!");
                 Timer.Stop();
                 return true;
             }
@@ -44,12 +42,6 @@ namespace GreyhoundRace
             {
                 return false;
             }
-        }
-
-        //Used to restart the startposition
-        public void Reset()
-        {
-            StartPosition = 0;
         }
     }
 }
