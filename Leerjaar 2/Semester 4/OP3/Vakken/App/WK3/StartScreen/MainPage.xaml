@@ -1,0 +1,87 @@
+﻿<Page
+    x:Class="StartScreen.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StartScreen"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#1D1D1D">
+
+        <!-- Define seven rows: -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="180"/>
+            <!-- The area above the tiles -->
+            <RowDefinition Height="128"/>
+            <!-- Tile row #1 -->
+            <RowDefinition Height="128"/>
+            <!-- Tile row #2 -->
+            <RowDefinition Height="128"/>
+            <!-- Tile row #3 -->
+            <RowDefinition Height="128"/>
+            <!-- Tile row #4 -->
+            <RowDefinition Height="128"/>
+            <!-- Tile row #5 -->
+            <RowDefinition/>
+            <!-- The area below the tiles -->
+        </Grid.RowDefinitions>
+
+        <!-- Define eight columns: -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="116"/>
+            <!-- Left margin -->
+            <ColumnDefinition Width="128"/>
+            <!-- Tile column #1 -->
+            <ColumnDefinition Width="128"/>
+            <!-- Tile column #2 -->
+            <ColumnDefinition Width="128"/>
+            <!-- Tile column #3 -->
+            <ColumnDefinition Width="128"/>
+            <!-- Tile column #4 -->
+            <ColumnDefinition/>
+            <!-- The user's name -->
+            <ColumnDefinition Width="80"/>
+            <!-- The user's photo -->
+            <ColumnDefinition Width="80"/>
+            <!-- Right margin -->
+        </Grid.ColumnDefinitions>
+
+        <!-- The "Start" text -->
+        <TextBlock Grid.Row="0" Grid.Column="1" FontSize="54" FontFamily="Segoe UI"
+             FontWeight="Light" VerticalAlignment="Center" Margin="0,0,0,26">
+      Start
+        </TextBlock>
+
+        <!-- The simulated live tiles -->
+        <Rectangle Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="4" 
+             Fill="DodgerBlue"/>
+        <Rectangle Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" Margin="4"
+             Fill="Coral"/>
+        <Rectangle Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="4"  
+             Fill="PaleVioletRed"/>
+        <Rectangle Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" Margin="4"
+             Fill="LimeGreen"/>
+        <Rectangle Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Margin="4"
+             Fill="White"/>
+        <Rectangle Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" Margin="4"
+             Fill="DodgerBlue"/>
+        <Rectangle Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="4"
+             Fill="LimeGreen"/>
+        <Rectangle Grid.Row="4" Grid.Column="3" Margin="4" Fill="Yellow"/>
+        <Rectangle Grid.Row="4" Grid.Column="4" Margin="4" Fill="PaleVioletRed"/>
+        <Rectangle Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="4" 
+             Fill="Tan"/>
+        <Rectangle Grid.Row="5" Grid.Column="3" Margin="4" Fill="DodgerBlue"/>
+        <Rectangle Grid.Row="5" Grid.Column="4" Margin="4" Fill="LimeGreen"/>
+
+        <!-- The current user's name and photo -->
+        <TextBlock Grid.Row="0" Grid.Column="5" FontSize="28" FontFamily="Segoe UI"
+             FontWeight="Light" HorizontalAlignment="Right"
+             VerticalAlignment="Center" Margin="0,0,8,28">
+      John Doe
+        </TextBlock>
+        <Image Grid.Row="0" Grid.Column="6" Source="profile.png"
+         VerticalAlignment="Center" Stretch="Uniform" Margin="0,0,0,26"/>
+    </Grid>
+</Page>
