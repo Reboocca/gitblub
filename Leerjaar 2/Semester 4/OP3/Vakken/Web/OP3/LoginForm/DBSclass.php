@@ -4,6 +4,7 @@
      private $user;
      private $pwd;
      private $database;
+     private $checkpassword;
 
      public $conn = null;
 
@@ -36,15 +37,34 @@
             }
         }
 
+        public function getUser($userID){
+            $sql = "select * from `users` where userID='$userID'";
+            $result = mysqli_query($this->conn, $sql);
+            
+            if ($rij = mysqli_fetch_array($result)) {
+                echo $rij["firstName"]." ".$rij["lastName"];
+            }
+
+        }
+
         public function login($username, $password){
             $sql = "select * from `users` where Username='$username'";
             $result = mysqli_query($this->conn, $sql);
 
             if ($rij = mysqli_fetch_array($result)) {
             
-                if ($rij['Password']==$password) {
+                $this->checkpassword=hash('sha256', $password.$rij["Salt"]);
+                for($round = 0; $round < 65536; $round++){
+                    $this->checkpassword = hash('sha256', $this->checkpassword.$rij["Salt"]);
+                }
+
+                if ($rij['Password']==$this->checkpassword) {
+                    unset($rij['Salt']);
+                    unset($rij['Password']);
+
                     $_SESSION['userid'] = $rij['UserID'];
-                    header("Location: LoggedIn.php");
+
+                    header("Location: Dashboard.php");
                 }
 
                 else {

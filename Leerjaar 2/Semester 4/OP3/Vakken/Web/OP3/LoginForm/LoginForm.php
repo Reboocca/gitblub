@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+	session_start();
+?>
 <html class="full" lang="en">
 	<head>
 		<title>Overwatch</title>
@@ -8,14 +11,9 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	</head>
 	<body>
-		<?php
-			$login_try= false;
-			$username_try;
-		?>
 		<div class="container">
-			<div class=" vertical-center col-md-offset-2 col-md-8 col-xs-offset-1 col-xs-10 login">
-				<div class="row">
-					<br/>
+			<div class=" vertical-center-login col-md-offset-4 col-md-4 col-xs-offset-1 col-xs-10 login">
+				<div class="row" style="background: #96d69e;">
 					<h1>
 						Welcome to Overwatch
 					</h1>
@@ -46,7 +44,7 @@
 							$username_try = $_POST['gbr'];		
 							include 'DBSclass.php';
 							$newlogin = new dbs();
-							$newlogin->login( $_POST['gbr'], md5($_POST['ww']));
+							$newlogin->login( $_POST['gbr'], $_POST['ww']);
 							
 						}
 					?>
