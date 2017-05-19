@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="Owl_learn_Blokboek5.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Owl_learn_Blokboek5"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="Auto" Width="Auto" MinWidth="1200" MinHeight="650">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/Background.png"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="30*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="1" Background="#B2FFFFFF">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="15*"/>
+                <RowDefinition Height="15*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Height="235" VerticalAlignment="Top" Width="243" Source="Assets/Logo.png" Stretch="Uniform"/>
+            <TextBox x:Name="tbUsername" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" TextWrapping="Wrap" PlaceholderText="Gebruikersnaam" VerticalAlignment="Top" Height="27" Width="307"/>
+            <PasswordBox x:Name="pbPassword" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center"  PlaceholderText="Wachtwoord" VerticalAlignment="Top" Height="27" Width="307"/>
+            <Button Content="Inloggen" HorizontalAlignment="Center"  Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" Height="48" Width="248" Click="login_Click"/>
+
+
+        </Grid>
+
+    </Grid>
+</Page>

@@ -1,0 +1,45 @@
+ 	
+	class Persoon
+        {
+            private List<Huurwoning> Huurwoningen = new List<Huurwoning>();
+            private List<Koopwoning> Koopwoningen = new List<Koopwoning>();
+            public string Naam { get; }
+
+            public Persoon(string naam)
+            {
+
+            }
+        }
+
+        class Woning
+        {
+            public string Adres { get; }
+            public double Inhoud { get; set; }
+            public int Slaapkamers { get; set; }
+
+            public Woning(string adres, double inhoud, int slaapkamers)
+            {
+
+            }
+        }
+
+        class Huurwoning : Woning
+        {
+            public double Huurprijs { get; set; }
+
+            public Huurwoning(string adres, double inhoud, int slaapkamers, double huurprijs) : base(adres, inhoud, slaapkamers)
+            {
+
+            }
+        }
+
+        class Koopwoning : Woning
+        {
+            public bool TeKoop { get; set; }
+            public double Prijs { get; set; }
+
+            public Koopwoning(string adres, double inhoud, int slaapkamers, double prijs) : base(adres, inhoud, slaapkamers)
+            {
+
+            }
+        }

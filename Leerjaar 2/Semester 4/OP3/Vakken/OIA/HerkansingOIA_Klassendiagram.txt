@@ -1,0 +1,65 @@
+	enum Afdeling (Management, Verkoop, Inkoop, Financiën, Personeelszaken);
+
+        public class Supermarktketen
+        {
+            public string Naam { get; set; }
+            private List<Filiaal> Filialen = new List<Filiaal>();
+
+            public void NieuwFiliaal(Filiaal filiaal)
+            {
+
+            }
+        }
+
+        public class Filiaal
+        {
+            public string Code { get; set; }
+            public string Adres { get; set; }
+            public int Filiaalhouder { get; }
+            private List<Medewerker> Medewerkers = new List<Medewerker>();
+
+            public Filiaal(string code, string adres)
+            {
+
+            }
+
+            public void NieuweMedewerker(string naam, string adres, double salaris, Afdeling afdeling)
+            {
+
+            }
+
+            public void EindDienstverband(int personeelnr)
+            {
+
+            }
+
+            public void NieuweFiliaalhouder(int personeelnr)
+            {
+
+            }
+        }
+
+        public class Personeel
+        {
+            public int Personeelnr { get; }
+            public string Naam { get; }
+            public double Salaris { get; }
+
+            public Personeel(string naam, double salaris)
+            {
+
+            }
+
+            public void SalarisAanpassing(double nieuwSalaris)
+            {
+
+            }
+        }
+
+        public class Medewerker : Personeel
+        {
+            public Medewerker(string naam, double salaris, Afdeling afdeling) :base (naam, salaris)
+            {
+
+            }
+        }

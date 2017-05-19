@@ -1,0 +1,6 @@
+OP4_WK2_PRG_uitleg_sockets is de server, deze zal geen form laten zien wanneer je em opstart
+OP4_WK2_PRG_sockets_client is de client, hiermee verstuur je de berichten, only put it in the first textbox plox
+
+p.s.
+
+ILY <3
