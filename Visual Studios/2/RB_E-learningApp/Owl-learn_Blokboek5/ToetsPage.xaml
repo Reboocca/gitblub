@@ -26,7 +26,6 @@
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="76.333"/>
             </Grid.RowDefinitions>
-            <Button x:Name="btTerug" Content="Terug" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="220" Height="44" Click="btTerug_Click"/>
         </Grid>
         <Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Background="#FFEA6D48" RenderTransformOrigin="0.503,0.611">
             <Grid.ColumnDefinitions>
@@ -58,8 +57,7 @@
                     <RowDefinition Height="5*"/>
                 </Grid.RowDefinitions>
                 <Rectangle Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="0" Fill="#FF7DC7C0"/>
-                <TextBlock x:Name="tbNoLes" Grid.Column="3" Grid.Row="7" Text="" FontSize="20px" FontFamily="Calibri Light" Foreground="#FFA03131" Grid.ColumnSpan="2" Margin="0,0,23.333,0" />
-                <TextBlock x:Name="tbLesnaam" Grid.Column="3" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Les naam" FontSize="30px" FontFamily="Calibri Light" Foreground="White"/>
+                <TextBlock x:Name="tbLOnaam" Grid.Column="3" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Les naam" FontSize="30px" FontFamily="Calibri Light" Foreground="White"/>
                 <RadioButton x:Name="rbA" Content="A" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Grid.Row="4" FontSize="16px" FontFamily="Calibri Light" Foreground="#FF191919" Grid.ColumnSpan="3" Width="695"/>
                 <RadioButton x:Name="rbB" Content="B" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Grid.Row="5" FontSize="16px" FontFamily="Calibri Light" Foreground="#FF191919" Grid.ColumnSpan="3" Width="695"/>
                 <RadioButton x:Name="rbC" Content="C" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Grid.Row="6" FontSize="16px" FontFamily="Calibri Light" Foreground="#FF191919" Grid.ColumnSpan="3" Width="695"/>

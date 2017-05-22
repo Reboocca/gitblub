@@ -31,11 +31,14 @@ namespace Owl_learn_Blokboek5
         public int _piRadioButton = 99;
         public int _iIndex = 0;
         public int _iScore = 0;
+        static Random rnd = new Random();
 
         //LISTS
         List<string> _lstAntwoorden = new List<string>();
-        List<string> _lsVragen = new List<string>();
+        List<string> _lstVragen = new List<string>();
         List<string> _lstVraagIDs = new List<string>();
+        List<string> _lstSelectieVragen = new List<string>();
+        List<string> _lstSelectieIDs= new List<string>();
         List<string> _lstAntwoordID = new List<string>();
 
         public ToetsPage()
@@ -59,7 +62,7 @@ namespace Owl_learn_Blokboek5
         public async void getVragenLijst()
         {
             HttpClient connect = new HttpClient();
-            HttpResponseMessage getVraaginfo = await connect.GetAsync("http://localhost/Leerjaar2/OP3/Owl-learn/functies/Lesform/getVragen.php?lID=" + lesid);
+            HttpResponseMessage getVraaginfo = await connect.GetAsync("http://localhost/Leerjaar2/OP3/Owl-learn/functies/Toetsform/getVragen.php?loID=" + loID);
             // gebruik eventueel PostAsync
             getVraaginfo.EnsureSuccessStatusCode();
 
@@ -73,13 +76,29 @@ namespace Owl_learn_Blokboek5
                 if (i != "")
                 {
                     string[] info = i.Split('.').ToArray();
-                    _lsVragen.Add(info[0]);
+                    _lstVragen.Add(info[0]);
                     _lstVraagIDs.Add(info[1]);
                 }
             }
+        }
 
-            NextQuestion();
-            getAntwoorden(_sVraagID);
+        public void SelectVragenfromList()
+        {
+            for (int i = _lstSelectieVragen.Count; i < 20; i++)
+            {
+                int r = rnd.Next(_lstVraagIDs.Count - 1);
+                bool contains = _lstSelectieVragen.Contains((string)_lstVraagIDs[r]);
+
+                if (!contains)
+                {
+                    _lstSelectieVragen.Add((string)_lstVragen[r]);
+                    _lstSelectieIDs.Add((string)_lstVraagIDs[r]);
+                }
+                else
+                {
+                    i -= 1;
+                }
+            }
         }
 
         public async void getAntwoorden(string vID)
@@ -117,7 +136,7 @@ namespace Owl_learn_Blokboek5
             // gebruik eventueel PostAsync
             getNaam.EnsureSuccessStatusCode();
 
-            tbLesnaam.Text = await getNaam.Content.ReadAsStringAsync();
+            tbLOnaam.Text = await getNaam.Content.ReadAsStringAsync();
         }
 
         private void btLogout_Tapped(object sender, TappedRoutedEventArgs e)
@@ -156,10 +175,10 @@ namespace Owl_learn_Blokboek5
                 }
 
 
-                if (_iIndex < _lsVragen.Count)
+                if (_iIndex < _lstSelectieVragen.Count)
                 {
-                    tbVraag.Text = _lsVragen[_iIndex];
-                    _sVraagID = _lstVraagIDs[_iIndex];
+                    tbVraag.Text = _lstSelectieVragen[_iIndex];
+                    _sVraagID = _lstSelectieIDs[_iIndex];
 
                     _iIndex++;
 
@@ -180,12 +199,19 @@ namespace Owl_learn_Blokboek5
 
             if (sContentButton == "Toets inleveren")
             {
-                if (_iScore >= (_lsVragen.Count / 2))
+                int eindScore = _iScore * 2;
+                if (eindScore >= 55)
                 {
-                    var dialog = new MessageDialog("Je hebt " + _iScore.ToString() + " van de " + _lsVragen.Count.ToString() + " vragen goed beantwoord, de toets is voltooid.", "Goed gedaan!");
+                    var dialog = new MessageDialog("Je hebt " + eindScore.ToString() + " van de 100 punten behaald, je hebt een voldoende!.", "Goed gedaan!");
                     await dialog.ShowAsync();
+                }
+                else
+                {
+                    var dialog = new MessageDialog("Je hebt " + eindScore.ToString() + " van de 100 punten behaald, je hebt helaas een onvoldoende.", "Volgende keer beter!");
+                    await dialog.ShowAsync();
+                }
 
-                    HttpClient connect = new HttpClient();
+                HttpClient connect = new HttpClient();
                     HttpResponseMessage saveVoortgang = await connect.GetAsync("http://localhost/Leerjaar2/OP3/Owl-learn/functies/Lesform/saveVoortgang.php?lID=" + loID + "&uID=" + userid);
                     // gebruik eventueel PostAsync
                     saveVoortgang.EnsureSuccessStatusCode();
@@ -203,17 +229,6 @@ namespace Owl_learn_Blokboek5
                     parameters.userID = userid;
 
                     this.Frame.Navigate(typeof(DashboardLeerling), parameters);
-                }
-                else
-                {
-                    var dialog = new MessageDialog("Je hebt " + _iScore.ToString() + " van de " + _lsVragen.Count.ToString() + " vragen goed beantwoord.", "Volgende keer beter!");
-                    await dialog.ShowAsync();
-
-                    var parameters = new user();
-                    parameters.userID = userid;
-
-                    this.Frame.Navigate(typeof(DashboardLeerling), parameters);
-                }
 
             }
         }

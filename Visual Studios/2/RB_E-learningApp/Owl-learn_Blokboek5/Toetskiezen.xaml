@@ -64,7 +64,6 @@
                 <ComboBox x:Name="cbVak" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" Width="475" ItemsSource="{Binding Vak}" SelectedValue="{Binding VakNaam}" SelectedValuePath="ID" DisplayMemberPath="VakNaam" SelectionChanged="cbVak_SelectionChanged"/>
                 <ComboBox x:Name="cbLesonderwerp" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" Width="475" ItemsSource="{Binding Lesonderwerp}" SelectedValue="{Binding LesonderwerpNaam}" SelectedValuePath="ID" DisplayMemberPath="LesonderwerpNaam" SelectionChanged="cbLesonderwerp_SelectionChanged"/>
                 <Button x:Name="btStart" Content="Kies een lesonderwerp om de toets te starten" Grid.Column="3" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" Width="475" IsEnabled="False" Click="btStart_Click"/>
-                <TextBlock x:Name="tbNoLes" Grid.Column="3" Grid.Row="7" Text="" FontSize="20px" FontFamily="Calibri Light" Foreground="#FFA03131" Grid.ColumnSpan="2"/>
             </Grid>
 
         </Grid>
