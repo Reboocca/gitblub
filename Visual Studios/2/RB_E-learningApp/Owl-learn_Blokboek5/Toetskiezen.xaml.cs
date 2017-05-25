@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -110,9 +111,24 @@ namespace Owl_learn_Blokboek5
             cbLesonderwerp.ItemsSource = lstLesonderwerp;
         }
 
-        private void btStart_Click(object sender, RoutedEventArgs e)
+        private async void btStart_Click(object sender, RoutedEventArgs e)
         {
 
+            if (cbLesonderwerp.SelectedIndex == -1)
+            {
+                var dialog = new MessageDialog("Kies eerst een lesonderwerp om verder te gaan", "Foutmelding");
+                await dialog.ShowAsync();
+            }
+            else
+            {
+                string sLoID = ((Lesonderwerp)(cbLesonderwerp.SelectedItem)).ID;
+
+                var parameters = new user();
+                parameters.userID = userid;
+                parameters.selectedloID = sLoID;
+
+                this.Frame.Navigate(typeof(ToetsPage), parameters);
+            }
         }
 
         private void cbVak_SelectionChanged(object sender, SelectionChangedEventArgs e)

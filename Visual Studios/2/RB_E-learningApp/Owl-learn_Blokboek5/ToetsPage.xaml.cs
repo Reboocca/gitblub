@@ -80,6 +80,8 @@ namespace Owl_learn_Blokboek5
                     _lstVraagIDs.Add(info[1]);
                 }
             }
+            NextQuestion();
+            getAntwoorden(_sVraagID);
         }
 
         public void SelectVragenfromList()
@@ -104,7 +106,7 @@ namespace Owl_learn_Blokboek5
         public async void getAntwoorden(string vID)
         {
             HttpClient connect = new HttpClient();
-            HttpResponseMessage getAntwoorden = await connect.GetAsync("http://localhost/Leerjaar2/OP3/Owl-learn/functies/Lesform/getAntwoorden.php?vID=" + vID);
+            HttpResponseMessage getAntwoorden = await connect.GetAsync("http://localhost/Leerjaar2/OP3/Owl-learn/functies/Toetsform/getAntwoorden.php?vID=" + vID);
             // gebruik eventueel PostAsync
             getAntwoorden.EnsureSuccessStatusCode();
 
@@ -132,7 +134,7 @@ namespace Owl_learn_Blokboek5
         public async void getLOnaam()
         {
             HttpClient connect = new HttpClient();
-            HttpResponseMessage getNaam = await connect.GetAsync("http://localhost/Leerjaar2/OP3/Owl-learn/functies/Lesform/getLesNaam.php?lID=" + loID);
+            HttpResponseMessage getNaam = await connect.GetAsync("http://localhost/Leerjaar2/OP3/Owl-learn/functies/Toetsform/getLonaam.php?loID=" + loID);
             // gebruik eventueel PostAsync
             getNaam.EnsureSuccessStatusCode();
 
@@ -161,7 +163,7 @@ namespace Owl_learn_Blokboek5
                 if (_piRadioButton != 99)
                 {
                     HttpClient connect = new HttpClient();
-                    HttpResponseMessage checkAntwoord = await connect.GetAsync("http://localhost/Leerjaar2/OP3/Owl-learn/functies/Lesform/checkAntwoord.php?antwoord=" + _lstAntwoorden[_piRadioButton] + "&vID=" + _sVraagID);
+                    HttpResponseMessage checkAntwoord = await connect.GetAsync("http://localhost/Leerjaar2/OP3/Owl-learn/functies/Toetsform/checkAntwoord.php?antwoord=" + _lstAntwoorden[_piRadioButton] + "&vID=" + _sVraagID);
                     // gebruik eventueel PostAsync
                     checkAntwoord.EnsureSuccessStatusCode();
 
@@ -211,24 +213,23 @@ namespace Owl_learn_Blokboek5
                     await dialog.ShowAsync();
                 }
 
-                HttpClient connect = new HttpClient();
-                    HttpResponseMessage saveVoortgang = await connect.GetAsync("http://localhost/Leerjaar2/OP3/Owl-learn/functies/Lesform/saveVoortgang.php?lID=" + loID + "&uID=" + userid);
-                    // gebruik eventueel PostAsync
-                    saveVoortgang.EnsureSuccessStatusCode();
+                //HttpClient connect = new HttpClient();
+                //HttpResponseMessage saveVoortgang = await connect.GetAsync("http://localhost/Leerjaar2/OP3/Owl-learn/functies/Lesform/saveVoortgang.php?lID=" + loID + "&uID=" + userid);
+                //// gebruik eventueel PostAsync
+                //saveVoortgang.EnsureSuccessStatusCode();
 
-                    string resultaat = await saveVoortgang.Content.ReadAsStringAsync();
+                //string resultaat = await saveVoortgang.Content.ReadAsStringAsync();
+                //if (resultaat == "failed")
+                //{
+                //   //Wanneer het mislukt is om de voortgang op te slaan, geef een foutmelding en ga terug naar het dashboard
+                //   var dialog1 = new MessageDialog("Er is iets missgegaan met het opslaan van de toets", "Foutmelding");
+                //   await dialog1.ShowAsync();
+                //}
 
-                    if (resultaat == "failed")
-                    {
-                        //Wanneer het mislukt is om de voortgang op te slaan, geef een foutmelding en ga terug naar het dashboard
-                        var dialog1 = new MessageDialog("Er is iets missgegaan met het opslaan van de toets", "Foutmelding");
-                        await dialog1.ShowAsync();
-                    }
+                var parameters = new user();
+                parameters.userID = userid;
 
-                    var parameters = new user();
-                    parameters.userID = userid;
-
-                    this.Frame.Navigate(typeof(DashboardLeerling), parameters);
+                this.Frame.Navigate(typeof(DashboardLeerling), parameters);
 
             }
         }
