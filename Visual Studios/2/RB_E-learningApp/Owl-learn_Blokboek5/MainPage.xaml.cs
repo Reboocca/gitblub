@@ -71,7 +71,10 @@ namespace Owl_learn_Blokboek5
 
                 else if(rolID == "3")
                 {
-                    this.Frame.Navigate(typeof(DashboardAdmin));
+                    var parameters = new user();
+                    parameters.userID = login;
+                    this.Frame.Navigate(typeof(DashboardAdmin), parameters);
+
                 }
                 
             }
