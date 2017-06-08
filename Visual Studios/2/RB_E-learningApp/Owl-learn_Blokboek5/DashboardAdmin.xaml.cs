@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -30,8 +31,7 @@ namespace Owl_learn_Blokboek5
         struct Account
         {
             public string ID { get; set; }
-            public string Voornaam { get; set; }
-            public string Achternaam { get; set; }
+            public string Naam { get; set; }
         }
 
         //LISTS
@@ -49,6 +49,7 @@ namespace Owl_learn_Blokboek5
 
             var parameters = (user)e.Parameter;
             userid = parameters.userID;
+            getAccounts();
         }
 
         public async void getAccounts()
@@ -62,21 +63,70 @@ namespace Owl_learn_Blokboek5
             result = await getNamen.Content.ReadAsStringAsync();
 
             string[] items = result.Split(',').ToArray();
-            //XML HULP NODIG
+            
             foreach (string i in items)
             {
                 if (i != "")
                 {
-                    string[] info = i.Split('.').ToArray();
-                    lstAccounts.Add(new Account() { ID = info[0], Voornaam = info[1], Achternaam = info[] });
+                   string[] info = i.Split('.').ToArray();
+                   lstAccounts.Add(new Account() { ID = info[0], Naam = info[1]});
                 }
 
             }
+            lbAccounts.ItemsSource = lstAccounts;
         }
 
         private void btLogout_Tapped(object sender, TappedRoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void btNieuw_Click(object sender, RoutedEventArgs e)
+        {
+            var parameters = new user();
+            parameters.userID = userid;
+
+            this.Frame.Navigate(typeof(ToevoegAccount), parameters);
+        }
+
+        private async void btVerwijder_Click(object sender, RoutedEventArgs e)
+        {
+            if (lbAccounts.SelectedIndex == -1)
+            {
+                var dialog = new MessageDialog("Selecteer eerst een account om deze te verwijderen.", "Foutmelding");
+                await dialog.ShowAsync();
+            }
+            else
+            {
+                string sAccountID = ((Account)(lbAccounts.SelectedItem)).ID;
+
+
+                var parameters = new user();
+                parameters.userID = userid;
+                parameters.selectedAccountID = sAccountID;
+
+                this.Frame.Navigate(typeof(VerwijderAccount), parameters);
+            }
+        }
+
+        private async void btBewerk_Click(object sender, RoutedEventArgs e)
+        {
+            if (lbAccounts.SelectedIndex == -1)
+            {
+                var dialog = new MessageDialog("Selecteer eerst een account om deze te kunnen wijzigen.", "Foutmelding");
+                await dialog.ShowAsync();
+            }
+            else
+            {
+                string sAccountID = ((Account)(lbAccounts.SelectedItem)).ID;
+
+
+                var parameters = new user();
+                parameters.userID = userid;
+                parameters.selectedAccountID = sAccountID;
+
+                this.Frame.Navigate(typeof(BewerkAccount), parameters);
+            }
         }
     }
 }

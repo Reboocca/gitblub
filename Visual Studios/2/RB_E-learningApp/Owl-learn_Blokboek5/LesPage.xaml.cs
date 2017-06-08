@@ -90,7 +90,6 @@ namespace Owl_learn_Blokboek5
             }
 
             NextQuestion();
-            getAntwoorden(_sVraagID);
         }
 
         public async void getAntwoorden(string vID)

@@ -11,5 +11,8 @@ namespace Owl_learn_Blokboek5
         public string userID { get; set; }
         public string selectedLes { get; set; }
         public string selectedloID { get; set; }
+        public string selectedAccountID { get; set; }
+        public string selectedVakID { get; set; }
+        public string selectedLesID { get; set; }
     }
 }

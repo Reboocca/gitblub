@@ -1,0 +1,68 @@
+﻿<Page
+    x:Class="Owl_learn_Blokboek5.ToevoegVak"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Owl_learn_Blokboek5"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+   mc:Ignorable="d" Height="Auto" Width="Auto" MinWidth="1200" MinHeight="650">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/BackgroundConsulent.png"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"  Background="#F2F5F5F5">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="76.333"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="btTerug" Content="Terug" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="220" Height="44" Click="Button_Click" Margin="10,16.166,10,16.167"/>
+
+        </Grid>
+        <Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Background="#FFBD3535" RenderTransformOrigin="0.503,0.611">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="22*"/>
+                <ColumnDefinition Width="80*"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+            <Image HorizontalAlignment="Center" Grid.Column="0" VerticalAlignment="Top" Source="Assets/Logo.png" Stretch="Uniform" Height="174" Margin="0,20,0,-202" Width="230"/>
+            <Image x:Name="btLogout" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"  Source="Assets/logout.png" Stretch="Uniform" Height="39" Margin="0,0,20,0" Width="37" Tapped="btLogout_Tapped" RenderTransformOrigin="0.59,0.5"/>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="1" Background="#CCFFFFFF" >
+            <Grid Background="#B2FFFFFF" Margin="100,50,100,65">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="5*"/>
+                </Grid.RowDefinitions>
+                <Rectangle Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="0" Fill="#FF9696F0"/>
+                <TextBlock Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Vak toevoegen" FontSize="30px" FontFamily="Calibri Light" Foreground="White" />
+                <TextBlock Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Text="Voer hieronder de benaming van het vak in en klik vervolgens op 'opslaan', om het vak toe te voegen aan de applicatie. Als u terug gaan naar het consulent dashboard, dan kunt u het vak bewerken en lesonderwerpen/lessen toevoegen." TextWrapping="Wrap" FontSize="14px" FontFamily="Calibri Light" Foreground="#FF191919" Margin="10.333,0.333,10.333,4.667" />
+                <TextBox x:Name="tbVaknaam" Grid.Row="3" HorizontalAlignment="Center" TextWrapping="Wrap" PlaceholderText="Voer hier de naam in van het vak" VerticalAlignment="Center" Height="27" Width="530" Grid.Column="1" TextChanged="tbVaknaam_TextChanged" />
+                <Button x:Name="btOpslaan" Content="Sla nieuwe vak op" Grid.Column="1" Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Center" Width="530" Click="btOpslaan_Click"/>
+            </Grid>
+        </Grid>
+
+
+    </Grid>
+</Page>

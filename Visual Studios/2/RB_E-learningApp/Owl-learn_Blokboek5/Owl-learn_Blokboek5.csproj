@@ -96,6 +96,15 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BewerkAccount.xaml.cs">
+      <DependentUpon>BewerkAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BewerkLes.xaml.cs">
+      <DependentUpon>BewerkLes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BewerkVak.xaml.cs">
+      <DependentUpon>BewerkVak.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DashboardAdmin.xaml.cs">
       <DependentUpon>DashboardAdmin.xaml</DependentUpon>
     </Compile>
@@ -118,7 +127,34 @@
     <Compile Include="ToetsPage.xaml.cs">
       <DependentUpon>ToetsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ToevoegAccount.xaml.cs">
+      <DependentUpon>ToevoegAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ToevoegLes.xaml.cs">
+      <DependentUpon>ToevoegLes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ToevoegLesonderwerp.xaml.cs">
+      <DependentUpon>ToevoegLesonderwerp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ToevoegVak.xaml.cs">
+      <DependentUpon>ToevoegVak.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ToevoegVraag.xaml.cs">
+      <DependentUpon>ToevoegVraag.xaml</DependentUpon>
+    </Compile>
     <Compile Include="user.cs" />
+    <Compile Include="VerwijderAccount.xaml.cs">
+      <DependentUpon>VerwijderAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VerwijderLes.xaml.cs">
+      <DependentUpon>VerwijderLes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VerwijderLesonderwerp.xaml.cs">
+      <DependentUpon>VerwijderLesonderwerp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VerwijderVak.xaml.cs">
+      <DependentUpon>VerwijderVak.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -172,6 +208,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="BewerkAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BewerkLes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BewerkVak.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DashboardAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -197,6 +245,42 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ToetsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ToevoegAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ToevoegLes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ToevoegLesonderwerp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ToevoegVak.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ToevoegVraag.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VerwijderAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VerwijderLes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VerwijderLesonderwerp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VerwijderVak.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

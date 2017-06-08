@@ -80,8 +80,7 @@ namespace Owl_learn_Blokboek5
                     _lstVraagIDs.Add(info[1]);
                 }
             }
-            NextQuestion();
-            getAntwoorden(_sVraagID);
+            SelectVragenfromList();
         }
 
         public void SelectVragenfromList()
@@ -101,6 +100,7 @@ namespace Owl_learn_Blokboek5
                     i -= 1;
                 }
             }
+            NextQuestion();
         }
 
         public async void getAntwoorden(string vID)
@@ -202,29 +202,99 @@ namespace Owl_learn_Blokboek5
             if (sContentButton == "Toets inleveren")
             {
                 int eindScore = _iScore * 2;
-                if (eindScore >= 55)
+
+                string sResultaat = "";
+
+                switch (eindScore)
                 {
-                    var dialog = new MessageDialog("Je hebt " + eindScore.ToString() + " van de 100 punten behaald, je hebt een voldoende!.", "Goed gedaan!");
+                    case 40:
+                        sResultaat = "10";
+                        break;
+                    case 38:
+                        sResultaat = "9.6";
+                        break;
+                    case 36:
+                        sResultaat = "9.2";
+                        break;
+                    case 34:
+                        sResultaat = "8.8";
+                        break;
+                    case 32:
+                        sResultaat = "8.4";
+                        break;
+                    case 30:
+                        sResultaat = "8";
+                        break;
+                    case 28:
+                        sResultaat = "7.5";
+                        break;
+                    case 26:
+                        sResultaat = "7.1";
+                        break;
+                    case 24:
+                        sResultaat = "6.8";
+                        break;
+                    case 22:
+                        sResultaat = "6.3";
+                        break;
+                    case 20:
+                        sResultaat = "5.9";
+                        break;
+                    case 18:
+                        sResultaat = "5.5";
+                        break;
+                    case 16:
+                        sResultaat = "5.0";
+                        break;
+                    case 14:
+                        sResultaat = "4.5";
+                        break;
+                    case 12:
+                        sResultaat = "4.0";
+                        break;
+                    case 10:
+                        sResultaat = "3.5";
+                        break;
+                    case 8:
+                        sResultaat = "3.0";
+                        break;
+                    case 6:
+                        sResultaat = "2.5";
+                        break;
+                    case 4:
+                        sResultaat = "2.0";
+                        break;
+                    case 2:
+                        sResultaat = "1.5";
+                        break;
+                    case 0:
+                        sResultaat = "1.0";
+                        break;
+                }
+
+                if (eindScore >= 18)
+                {
+                    var dialog = new MessageDialog("Je hebt een " + sResultaat + " gehaald, je hebt een voldoende!.", "Goed gedaan!");
                     await dialog.ShowAsync();
                 }
                 else
                 {
-                    var dialog = new MessageDialog("Je hebt " + eindScore.ToString() + " van de 100 punten behaald, je hebt helaas een onvoldoende.", "Volgende keer beter!");
-                    await dialog.ShowAsync();
+                    var dialog = new MessageDialog("Je hebt een " + sResultaat + " gehaald, je hebt helaas een onvoldoende.", "Volgende keer beter!");
+                    await dialog.ShowAsync(); 
                 }
 
-                //HttpClient connect = new HttpClient();
-                //HttpResponseMessage saveVoortgang = await connect.GetAsync("http://localhost/Leerjaar2/OP3/Owl-learn/functies/Lesform/saveVoortgang.php?lID=" + loID + "&uID=" + userid);
-                //// gebruik eventueel PostAsync
-                //saveVoortgang.EnsureSuccessStatusCode();
+                HttpClient connect = new HttpClient();
+                HttpResponseMessage saveVoortgang = await connect.GetAsync("http://localhost/Leerjaar2/OP3/Owl-learn/functies/Toetsform/saveVoortgang.php?loID=" + loID + "&uID=" + userid + "&score=" + sResultaat);
+                // gebruik eventueel PostAsynco
+                saveVoortgang.EnsureSuccessStatusCode();
 
-                //string resultaat = await saveVoortgang.Content.ReadAsStringAsync();
-                //if (resultaat == "failed")
-                //{
-                //   //Wanneer het mislukt is om de voortgang op te slaan, geef een foutmelding en ga terug naar het dashboard
-                //   var dialog1 = new MessageDialog("Er is iets missgegaan met het opslaan van de toets", "Foutmelding");
-                //   await dialog1.ShowAsync();
-                //}
+                string resultaat = await saveVoortgang.Content.ReadAsStringAsync();
+                if (resultaat == "failed")
+                {
+                    //Wanneer het mislukt is om de voortgang op te slaan, geef een foutmelding en ga terug naar het dashboard
+                    var dialog1 = new MessageDialog("Er is iets missgegaan met het opslaan van de toets", "Foutmelding");
+                    await dialog1.ShowAsync();
+                }
 
                 var parameters = new user();
                 parameters.userID = userid;
