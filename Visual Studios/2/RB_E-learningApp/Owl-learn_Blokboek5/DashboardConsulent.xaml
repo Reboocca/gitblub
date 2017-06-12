@@ -28,7 +28,8 @@
                 <RowDefinition Height="4*"/>
                 <RowDefinition Height="25*"/>
             </Grid.RowDefinitions>
-            <Button x:Name="btPlanning" Content="Planningen beheren" Grid.Row="1" VerticalAlignment="top" HorizontalAlignment="Center" Width="213" Click="btPlanning_Click"/>
+            <Button x:Name="btLesPlanning" Content="Les planningen beheren" Grid.Row="1" VerticalAlignment="top" HorizontalAlignment="Center" Width="213" Click="btLesPlanning_Click" />
+            <Button x:Name="btToetsPlanning" Content="Toets planningen beheren" Grid.Row="2" VerticalAlignment="top" HorizontalAlignment="Center" Width="213" Click="btToetsPlanning_Click" />
 
         </Grid>
         <Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Background="#FFBD3535" RenderTransformOrigin="0.503,0.611">

@@ -120,6 +120,12 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PlanningLes.xaml.cs">
+      <DependentUpon>PlanningLes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PlanningToets.xaml.cs">
+      <DependentUpon>PlanningToets.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Toetskiezen.xaml.cs">
       <DependentUpon>Toetskiezen.xaml</DependentUpon>
@@ -135,6 +141,12 @@
     </Compile>
     <Compile Include="ToevoegLesonderwerp.xaml.cs">
       <DependentUpon>ToevoegLesonderwerp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ToevoegPlanningLes.xaml.cs">
+      <DependentUpon>ToevoegPlanningLes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ToevoegPlanningToets.xaml.cs">
+      <DependentUpon>ToevoegPlanningToets.xaml</DependentUpon>
     </Compile>
     <Compile Include="ToevoegVak.xaml.cs">
       <DependentUpon>ToevoegVak.xaml</DependentUpon>
@@ -240,6 +252,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="PlanningLes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlanningToets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Toetskiezen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -257,6 +277,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ToevoegLesonderwerp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ToevoegPlanningLes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ToevoegPlanningToets.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

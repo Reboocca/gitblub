@@ -68,13 +68,13 @@ namespace Owl_learn_Blokboek5
             string result = null;
             result = await getVraag.Content.ReadAsStringAsync();
 
-            string[] items = result.Split(',').ToArray();
+            string[] items = result.Split(']').ToArray();
 
             foreach (string i in items)
             {
                 if (i != "")
                 {
-                    string[] info = i.Split('.').ToArray();
+                    string[] info = i.Split('^').ToArray();
                     lstVragen.Add(new Vraag() { Omschrijving = info[0], ID = info[1] });
                 }
 

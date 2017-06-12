@@ -127,9 +127,20 @@ namespace Owl_learn_Blokboek5
             }
         }
 
-        private void btPlanning_Click(object sender, RoutedEventArgs e)
+        private void btToetsPlanning_Click(object sender, RoutedEventArgs e)
         {
+            var parameters = new user();
+            parameters.userID = userid;
 
+            this.Frame.Navigate(typeof(PlanningToets), parameters);
+        }
+
+        private void btLesPlanning_Click(object sender, RoutedEventArgs e)
+        {
+            var parameters = new user();
+            parameters.userID = userid;
+
+            this.Frame.Navigate(typeof(PlanningLes), parameters);
         }
     }
 }

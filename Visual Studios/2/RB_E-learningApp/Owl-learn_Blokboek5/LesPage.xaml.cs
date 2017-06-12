@@ -77,13 +77,13 @@ namespace Owl_learn_Blokboek5
             string Vragen = null;
             Vragen = await getVraaginfo.Content.ReadAsStringAsync();
 
-            string[] items = Vragen.Split(',').ToArray();
+            string[] items = Vragen.Split(']').ToArray();
 
             foreach (string i in items)
             {
                 if (i != "")
                 {
-                    string[] info = i.Split('.').ToArray();
+                    string[] info = i.Split('^').ToArray();
                     _lsVragen.Add(info[0]);
                     _lstVraagIDs.Add(info[1]);
                 }
@@ -102,13 +102,13 @@ namespace Owl_learn_Blokboek5
             string Antwoorden = null;
             Antwoorden = await getAntwoorden.Content.ReadAsStringAsync();
 
-            string[] items = Antwoorden.Split(',').ToArray();
+            string[] items = Antwoorden.Split(']').ToArray();
 
             foreach (string i in items)
             {
                 if (i != "")
                 {
-                    string[] info = i.Split('.').ToArray();
+                    string[] info = i.Split('^').ToArray();
                     _lstAntwoorden.Add(info[0]);
                     _lstAntwoordID.Add(info[1]);
                 }

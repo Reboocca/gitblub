@@ -34,7 +34,6 @@ namespace Owl_learn_Blokboek5
             public string ID { get; set; }
             public string LesonderwerpNaam { get; set; }
         }
-
         struct Les
         {
             public string ID { get; set; }

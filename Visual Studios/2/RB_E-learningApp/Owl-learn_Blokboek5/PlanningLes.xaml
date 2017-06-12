@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="Owl_learn_Blokboek5.PlanningLes"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Owl_learn_Blokboek5"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="Auto" Width="Auto" MinWidth="1200" MinHeight="650">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/BackgroundConsulent.png"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"  Background="#F2F5F5F5">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="76.333"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="btTerug" Content="Terug" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="220" Height="44" Click="Button_Click" Margin="10,16.166,10,16.167"/>
+
+        </Grid>
+        <Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Background="#FFBD3535" RenderTransformOrigin="0.503,0.611">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="22*"/>
+                <ColumnDefinition Width="80*"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+            <Image HorizontalAlignment="Center" Grid.Column="0" VerticalAlignment="Top" Source="Assets/Logo.png" Stretch="Uniform" Height="174" Margin="0,20,0,-202" Width="230"/>
+            <Image x:Name="btLogout" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"  Source="Assets/logout.png" Stretch="Uniform" Height="39" Margin="0,0,20,0" Width="37" Tapped="btLogout_Tapped"/>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="1" Background="#CCFFFFFF" >
+            <Grid Background="#B2FFFFFF" Margin="105,38,95,46">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="40*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="70*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Rectangle Grid.Column="0" Grid.ColumnSpan="7" Grid.Row="0" Fill="#FF9696F0"/>
+                <TextBlock Grid.Column="0" Grid.ColumnSpan="7" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Les planningen beheren" FontSize="30px" FontFamily="Calibri Light" Foreground="White" />
+                <ListBox x:Name="lbLeerlingen" HorizontalAlignment="Left" Height="250" Grid.Row="4" VerticalAlignment="Top" Width="233" FontSize="14px" FontFamily="Calibri Light" Foreground="#FF191919" ItemsSource="{Binding Leerling}" SelectedValue="{Binding Naam}" DisplayMemberPath="Naam" SelectedValuePath="ID" Grid.ColumnSpan="2" Margin="30,0.333,0,0" SelectionChanged="lbLeerlingen_SelectionChanged"/>
+                <Button x:Name="btNieuw" Content="Nieuwe planning toevoegen" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left" Width="232" Height="39" Margin="0.667,5.667,0,7" Click="btNieuw_Click"/>
+                <Button x:Name="btVerwijder" Content="Verwijder planning" Grid.Column="3" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Right" Width="406" Height="39" Margin="0,5.667,9.667,7" Click="btVerwijder_Click"/>
+                <TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" Text="Selecteer een leerling om de les planningen van de geselecteerde leerling te kunnen inzien. Als u een les planning wilt verwijderen, selecteer de juiste planning en verwijder deze. De actie kan niet ongedaan worden gemaakt. Verder kunt u ook een nieuwe les planning toevoegen." TextWrapping="Wrap" FontSize="14px" FontFamily="Calibri Light" Foreground="#FF191919" Margin="10.333,0.333,10,4.667" />
+                <ListBox x:Name="lbPlanning" Grid.Column="3" HorizontalAlignment="Right" Height="250" Grid.Row="4" VerticalAlignment="Top" Width="406" FontSize="14px" FontFamily="Calibri Light" Foreground="#FF191919" ItemsSource="{Binding Planning}" SelectedValue="{Binding Naam}" DisplayMemberPath="Naam" SelectedValuePath="ID" Margin="0,0.333,9.667,0"/>
+                <TextBlock Grid.Row="3" Text="Leerlingen:" TextWrapping="Wrap" FontSize="16px" FontFamily="Calibri Light" Foreground="#FF191919" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="25" Margin="9.667,0,0,262" Grid.RowSpan="2" Grid.Column="1"/>
+                <TextBlock Grid.Column="3" Grid.Row="3" Text="Les planningen:" TextWrapping="Wrap" FontSize="16px" FontFamily="Calibri Light" Foreground="#FF191919" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,4.667" Height="25"/>
+            </Grid>
+        </Grid>
+
+
+    </Grid>
+</Page>
