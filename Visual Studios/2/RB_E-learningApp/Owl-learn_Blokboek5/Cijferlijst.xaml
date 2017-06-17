@@ -1,0 +1,82 @@
+﻿<Page
+    x:Class="Owl_learn_Blokboek5.Cijferlijst"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Owl_learn_Blokboek5"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="Auto" Width="Auto" MinWidth="1200" MinHeight="650">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/Background.png"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"  Background="#F2F5F5F5">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="76.333"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="btTerug" Content="Terug" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="220" Height="44" Click="Button_Click"/>
+        </Grid>
+        <Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Background="#FFEA6D48" RenderTransformOrigin="0.503,0.611">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="22*"/>
+                <ColumnDefinition Width="80*"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+            <Image HorizontalAlignment="Center" Grid.Column="0" VerticalAlignment="Top" Source="Assets/Logo.png" Stretch="Uniform" Height="174" Margin="0,20,0,-202" Width="230"/>
+            <Image x:Name="btLogout" HorizontalAlignment="Right" Grid.Column="2"  Source="Assets/logout.png" Stretch="Uniform" Margin="0,10,20,10" Width="37" Tapped="btLogout_Tapped" />
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="1" Background="#CCFFFFFF" >
+            <Grid Background="#B2FFFFFF" Margin="100,50,100,60">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="100*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="40*"/>
+                    <RowDefinition Height="5*"/>
+                </Grid.RowDefinitions>
+                <Rectangle Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="0" Fill="#FF9BC77D"/>
+                <TextBlock Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Cijferlijst" FontSize="40px" FontFamily="Calibri Light" Foreground="White" />
+                <TextBlock Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2" Text="Hieronder staat je cijferlijst van alle toetsen die je gemaakt hebt." FontSize="20px" FontFamily="Calibri Light" Foreground="#FF191919" />
+                <ListView x:Name="lvInfo" Grid.Column="1" Grid.Row="3" ItemsSource="{Binding Info}"  Background="#FFF7F7F7" Grid.ColumnSpan="2" Margin="0.333,39,34,0.333">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Width="650">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20*"></ColumnDefinition>
+                                    <ColumnDefinition Width="70*"></ColumnDefinition>
+                                    <ColumnDefinition Width="20*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBox IsEnabled="False" Background="Transparent" Text="{Binding Vak}" Grid.Column="0" Height="30" Margin="0,0,0,0"/>
+                                <TextBox IsEnabled="False" Text="{Binding Lesonderwerp}" Grid.Column="1" Margin="5,0,0,0"/>
+                                <TextBox IsEnabled="False" Text="{Binding Cijfer}" Grid.Column="2" Margin="5,0,0,0"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <TextBlock Grid.Column="1" Grid.Row="3" Text="Vak" FontSize="20px" FontFamily="Calibri Light" Foreground="#FF191919" Margin="51.333,0,490.667,270.333" />
+                <TextBlock Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" Text="Lesonderwerp" FontSize="20px" FontFamily="Calibri Light" Foreground="#FF191919" Margin="270.333,0,295.667,268.333" />
+                <TextBlock Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right" Text="Cijfer" FontSize="20px" FontFamily="Calibri Light" Foreground="#FF191919" Margin="0,5,77.667,263.333" />
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</Page>

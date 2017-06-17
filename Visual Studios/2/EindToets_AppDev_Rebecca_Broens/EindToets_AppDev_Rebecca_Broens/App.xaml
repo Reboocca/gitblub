@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="EindToets_AppDev_Rebecca_Broens.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EindToets_AppDev_Rebecca_Broens"
+    RequestedTheme="Light">
+
+</Application>

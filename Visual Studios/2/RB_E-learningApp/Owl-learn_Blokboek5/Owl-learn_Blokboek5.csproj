@@ -105,6 +105,12 @@
     <Compile Include="BewerkVak.xaml.cs">
       <DependentUpon>BewerkVak.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Cijferlijst.xaml.cs">
+      <DependentUpon>Cijferlijst.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DagPlanning.xaml.cs">
+      <DependentUpon>DagPlanning.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DashboardAdmin.xaml.cs">
       <DependentUpon>DashboardAdmin.xaml</DependentUpon>
     </Compile>
@@ -229,6 +235,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BewerkVak.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cijferlijst.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DagPlanning.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

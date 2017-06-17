@@ -211,5 +211,21 @@ namespace Owl_learn_Blokboek5
 
             this.Frame.Navigate(typeof(Toetskiezen), parameters);
         }
+
+        private void btRapport_Click(object sender, RoutedEventArgs e)
+        {
+            var parameters = new user();
+            parameters.userID = userid;
+
+            this.Frame.Navigate(typeof(Cijferlijst), parameters);
+        }
+
+        private void btDag_Click(object sender, RoutedEventArgs e)
+        {
+            var parameters = new user();
+            parameters.userID = userid;
+
+            this.Frame.Navigate(typeof(DagPlanning), parameters);
+        }
     }
 }

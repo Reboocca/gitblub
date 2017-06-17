@@ -90,7 +90,7 @@ namespace Owl_learn_Blokboek5
         public async void getLesonderwerp(string selectedVakID)
         {
             HttpClient connect = new HttpClient();
-            HttpResponseMessage getLesonderwerp = await connect.GetAsync("http://localhost/Leerjaar2/OP3/Owl-learn/functies/LeerlingDashboard/getLesonderwerp.php?vakID=" + selectedVakID);
+            HttpResponseMessage getLesonderwerp = await connect.GetAsync("http://localhost/Leerjaar2/OP3/Owl-learn/functies/Toetsform/getLesonderwerp.php?vakID=" + selectedVakID + "&datum=" + DateTime.Now.ToString("yyyy-MM-dd"));
             // gebruik eventueel PostAsync
             getLesonderwerp.EnsureSuccessStatusCode();
 

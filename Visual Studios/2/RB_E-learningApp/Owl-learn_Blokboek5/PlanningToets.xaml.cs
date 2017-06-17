@@ -106,9 +106,52 @@ namespace Owl_learn_Blokboek5
             lbPlanning.ItemsSource = lstPlanningen;
         }
 
-        private void btVerwijder_Click(object sender, RoutedEventArgs e)
+        private async void deletePlanning(string id)
         {
+            HttpClient connect = new HttpClient();
+            HttpResponseMessage deleteVak = await connect.GetAsync("http://localhost/Leerjaar2/OP3/Owl-learn/functies/ConsulentDashboard/verwijderPlanningToets.php?pID=" + id);
+            // gebruik eventueel PostAsync
+            deleteVak.EnsureSuccessStatusCode();
 
+            string resultaat = await deleteVak.Content.ReadAsStringAsync();
+
+            if (resultaat == "failed")
+            {
+                //Wanneer het mislukt is om het account op te slaan, geef een foutmelding en ga terug naar het dashboard
+                var dialog1 = new MessageDialog("Er is iets missgegaan met het verwijderen van de planning", "Foutmelding");
+                await dialog1.ShowAsync();
+            }
+            else
+            {
+                var dialog1 = new MessageDialog("De planning is succesvol verwijdert.", "Succes!");
+                await dialog1.ShowAsync();
+
+                //Haal het userid op
+                string selectedUserID = ((Leerling)(lbLeerlingen.SelectedItem)).ID;
+
+                //Leeg de les lijst
+                lbPlanning.ItemsSource = null;
+
+                //Leeg de lists;
+                lstPlanningen.Clear();
+
+                //Haal de nieuwe planningen op
+                getPlanningen(selectedUserID);
+            }
+        }
+
+        private async void btVerwijder_Click(object sender, RoutedEventArgs e)
+        {
+            if (lbPlanning.SelectedIndex == -1)
+            {
+                var dialog = new MessageDialog("Selecteer eerst een planning om deze te kunnen verwijderen.", "Foutmelding");
+                await dialog.ShowAsync();
+            }
+            else
+            {
+                string selectedPlanning = ((Planning)(lbPlanning.SelectedItem)).ID;
+                deletePlanning(selectedPlanning);
+            }
         }
 
         private void btLogout_Tapped(object sender, TappedRoutedEventArgs e)
@@ -139,7 +182,7 @@ namespace Owl_learn_Blokboek5
             getPlanningen(selectedUserID);
         }
 
-        private async void btNieuw_Click(object sender, RoutedEventArgs e)
+        private async void btNieuw_Click_1(object sender, RoutedEventArgs e)
         {
             if (lbLeerlingen.SelectedIndex == -1)
             {
