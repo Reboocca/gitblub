@@ -52,6 +52,7 @@ namespace Owl_learn_Blokboek5
         {
             var parameters = new user();
             parameters.userID = userid;
+            parameters.selectedVakID = vakid;
 
             this.Frame.Navigate(typeof(BewerkVak), parameters);
         }

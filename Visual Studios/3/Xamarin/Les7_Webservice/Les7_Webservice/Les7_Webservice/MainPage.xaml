@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Les7_Webservice"
+             x:Class="Les7_Webservice.MainPage">
+
+    <StackLayout Margin="10, 40">
+        <Label Text="Radiozenders" TextColor="Red"/>
+        <ListView x:Name="radiolijst" Footer="REBR © 2017"/>
+        <StackLayout Orientation="Horizontal">
+            <Entry x:Name="provincie" Text=""  WidthRequest="200" 
+               Placeholder="Provincie"/>
+            <Entry x:Name="omroep" Text=""  WidthRequest="200" 
+               Placeholder="Omroep"/>
+            <Button Text="Go" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+
+
+</ContentPage>

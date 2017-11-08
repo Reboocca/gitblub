@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Les5_Bonbons"
+             x:Class="Les5_Bonbons.MainPage"
+             x:Name="Bonbon">
+
+    <StackLayout Margin="10, 40">
+        <ListView x:Name="lijst" ItemsSource="{Binding LijstBonbons, Source={x:Reference Bonbon}}"  SeparatorVisibility="None">
+            <ListView.Header>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Naam" HorizontalOptions="StartAndExpand"/>
+                    <Label Text="Chocolade" HorizontalOptions="StartAndExpand"/>
+                    <Label Text="Noot" HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
+            </ListView.Header>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Naam}" HorizontalOptions="StartAndExpand"/>
+                            <Label Text="{Binding Chocolade}" HorizontalOptions="StartAndExpand"/>
+                            <Label Text="{Binding Noot}" HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Wit" Clicked="ButtonClicked" HorizontalOptions="StartAndExpand"/>
+            <Button Text="Melk" Clicked="ButtonClicked" HorizontalOptions="StartAndExpand"/>
+            <Button Text="Puur" Clicked="ButtonClicked" HorizontalOptions="StartAndExpand"/>
+        </StackLayout>
+
+    </StackLayout>
+    
+
+</ContentPage>

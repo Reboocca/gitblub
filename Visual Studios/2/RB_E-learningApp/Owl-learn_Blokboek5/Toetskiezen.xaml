@@ -60,7 +60,7 @@
                 <TextBlock Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Toetsen" FontSize="40px" FontFamily="Calibri Light" Foreground="White" />
                 <TextBlock Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2" Text="Volg de onderstaande stappen om te beginnen aan een les." FontSize="20px" FontFamily="Calibri Light" Foreground="#FF191919" />
                 <TextBlock Grid.Column="1" Grid.Row="3" Text="Kies een vak:" FontSize="20px" FontFamily="Calibri Light" Foreground="#FF191919" />
-                <TextBlock Grid.Column="1" Grid.Row="4" Text="Kies een lesonderwerp:" FontSize="20px" FontFamily="Calibri Light" Foreground="#FF191919" />
+                <TextBlock Grid.Column="1" Grid.Row="4" Text="Kies een toets:" FontSize="20px" FontFamily="Calibri Light" Foreground="#FF191919" />
                 <ComboBox x:Name="cbVak" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" Width="475" ItemsSource="{Binding Vak}" SelectedValue="{Binding VakNaam}" SelectedValuePath="ID" DisplayMemberPath="VakNaam" SelectionChanged="cbVak_SelectionChanged"/>
                 <ComboBox x:Name="cbLesonderwerp" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" Width="475" ItemsSource="{Binding Lesonderwerp}" SelectedValue="{Binding LesonderwerpNaam}" SelectedValuePath="ID" DisplayMemberPath="LesonderwerpNaam" SelectionChanged="cbLesonderwerp_SelectionChanged"/>
                 <Button x:Name="btStart" Content="Kies een lesonderwerp om de toets te starten" Grid.Column="3" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" Width="475" IsEnabled="False" Click="btStart_Click"/>

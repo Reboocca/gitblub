@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppDev_Examen"
+             x:Class="AppDev_Examen.MainPage">
+
+    <Grid BackgroundColor="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="lbTitleApp" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" Text="SCADA Kassenbouw BV" FontSize="18"/>
+        <Label x:Name="lbType" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2" Text="Sproeiers" FontSize="14"/>
+
+        <Grid Grid.Column="1" Grid.Row="4" BackgroundColor="LightYellow">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="A1" Grid.Row="0" Text="A:"/>
+            <Label x:Name="B1" Grid.Row="1" Text="A:"/>
+            <Label x:Name="C1" Grid.Row="2" Text="A:"/>
+            <Label x:Name="D1" Grid.Row="3" Text="A:"/>
+        </Grid>
+        <Grid Grid.Column="3" Grid.Row="4" BackgroundColor="LightYellow">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="A2" Grid.Row="0" Text="A:"/>
+            <Label x:Name="B2" Grid.Row="1" Text="A:"/>
+            <Label x:Name="C2" Grid.Row="2" Text="A:"/>
+            <Label x:Name="D2" Grid.Row="3" Text="A:"/>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="6" BackgroundColor="LightYellow">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="A3" Grid.Row="0" Text="A:"/>
+            <Label x:Name="B3" Grid.Row="1" Text="A:"/>
+            <Label x:Name="C3" Grid.Row="2" Text="A:"/>
+            <Label x:Name="D3" Grid.Row="3" Text="A:"/>
+        </Grid>
+        <Grid Grid.Column="3" Grid.Row="6" BackgroundColor="LightYellow">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="A4" Grid.Row="0" Text="A:"/>
+            <Label x:Name="B4" Grid.Row="1" Text="A:"/>
+            <Label x:Name="C4" Grid.Row="2" Text="A:"/>
+            <Label x:Name="D4" Grid.Row="3" Text="A:"/>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="8" BackgroundColor="LightYellow">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="A5" Grid.Row="0" Text="A:"/>
+            <Label x:Name="B5" Grid.Row="1" Text="A:"/>
+            <Label x:Name="C5" Grid.Row="2" Text="A:"/>
+            <Label x:Name="D5" Grid.Row="3" Text="A:"/>            
+        </Grid>
+        <Grid Grid.Column="3" Grid.Row="8" BackgroundColor="LightYellow">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="A6" Grid.Row="0" Text="A:"/>
+            <Label x:Name="B6" Grid.Row="1" Text="A:"/>
+            <Label x:Name="C6" Grid.Row="2" Text="A:"/>
+            <Label x:Name="D6" Grid.Row="3" Text="A:"/>
+        </Grid>
+
+        <Button x:Name="Sproeier" Grid.Column="1" Grid.Row="10" Text="Sproeiers" Clicked="Sproeier_Clicked"/>
+        <Button x:Name="Lamp" Grid.Column="3" Grid.Row="10" Text="Lampen" Clicked="Lamp_Clicked"/>
+    </Grid>
+
+</ContentPage>

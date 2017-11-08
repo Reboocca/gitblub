@@ -6,15 +6,22 @@
 
     $username = $_REQUEST["user"];
     $password = $_REQUEST["pwd"];
-    
+    $checkpassword; 
+
     $conn = new mysqli($server, $user, $pwd, $database);
     $sql = "select * from `users` where Username='$username'";
     $result = mysqli_query($conn, $sql);
+    
     if ($rij = mysqli_fetch_array($result)) {
-        if ($rij['Password']==$password) {
-            echo $rij["UserID"];         
+        $checkpassword = hash('sha256', $password.$rij["Salt"]);
+        for($round = 0; $round < 65536; $round++){
+            $checkpassword = hash('sha256', $checkpassword.$rij["Salt"]);
         }
-        else{
+        
+        if ($rij['Password']==$checkpassword) {
+            echo $rij["UserID"];
+        }
+        else {
             echo "false";
         }
     }

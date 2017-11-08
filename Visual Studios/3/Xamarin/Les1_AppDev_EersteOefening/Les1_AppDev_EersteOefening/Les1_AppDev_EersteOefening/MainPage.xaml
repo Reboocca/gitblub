@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Les1_AppDev_EersteOefening"
+             x:Class="Les1_AppDev_EersteOefening.MainPage">
+
+    <StackLayout>
+        <Label x:Name="top" Text="Welcome to Xamarin Forms!" 
+           VerticalOptions="Center" HorizontalOptions="Center" />
+        <Button Text="1" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" 
+           Clicked="ButtonClicked" />
+        <Button Text="2" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" 
+           Clicked="ButtonClicked" />
+        <Button Text="3" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" 
+           Clicked="ButtonClicked"/>
+        <Label x:Name="bottom"  Text="AMJE copyright 2017" 
+           VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
+    </StackLayout>
+
+
+
+</ContentPage>

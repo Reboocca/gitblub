@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppDev_Examenopdracht_RB"
+             x:Class="AppDev_Examenopdracht_RB.MainPage">
+
+
+    <Grid BackgroundColor="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="TitleApp" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" Text="SCADA Kassenbouw BV" FontSize="18"/>
+        <Label x:Name="Type" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2" Text="Sproeiers" FontSize="14"/>
+
+
+        <Grid Grid.Column="1" Grid.Row="4" BackgroundColor="LightYellow">
+            <ListView x:Name="lv1"/>
+        </Grid>
+        <Grid Grid.Column="3" Grid.Row="4" BackgroundColor="LightYellow">
+            <ListView x:Name="lv2"/>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="6" BackgroundColor="LightYellow">
+            <ListView x:Name="lv3"/>
+        </Grid>
+        <Grid Grid.Column="3" Grid.Row="6" BackgroundColor="LightYellow">
+            <ListView x:Name="lv4"/>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="8" BackgroundColor="LightYellow">
+            <ListView x:Name="lv5"/>
+        </Grid>
+        <Grid Grid.Column="3" Grid.Row="8" BackgroundColor="LightYellow">
+            <ListView x:Name="lv6"/>
+        </Grid>
+
+        <Button x:Name="Sproeier" Grid.Column="1" Grid.Row="10" Text="Sproeiers"/>
+        <Button x:Name="Lamp" Grid.Column="3" Grid.Row="10" Text="Lampen"/>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:UnitTestWalkThroughProject"
+             x:Class="UnitTestWalkThroughProject.MainPage">
+
+    <StackLayout  HorizontalOptions="Fill" VerticalOptions="Start" Margin="40,120">
+        <Label  Text="Bank Account" FontSize="Large" TextColor="Navy"/>
+        <Label x:Name="Name"      Text="Name"    FontSize="Medium"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Label Text="Balance: " />
+            <Label x:Name="Balance" />
+        </StackLayout>
+        <Switch IsToggled="True" PropertyChanged="Frozen_PropertyChanged"></Switch>
+        <Label  Text="Bank Transfer" FontSize="Large" TextColor="Navy" Margin="0,40,0,0"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Label Text="Amount:" VerticalOptions="End" FontSize="Medium"/>
+            <Entry x:Name="Amount"  Placeholder="0.0" HorizontalOptions="FillAndExpand"></Entry>
+            <Button Text="Debit" Margin="10" Clicked="Debit_Clicked"/>
+            <Button Text="Credit" Margin="10" Clicked="Credit_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

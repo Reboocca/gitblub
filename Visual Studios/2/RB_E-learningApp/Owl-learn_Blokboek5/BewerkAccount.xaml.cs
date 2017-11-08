@@ -29,6 +29,7 @@ namespace Owl_learn_Blokboek5
         public string userid;
         public string selectedTag;
         public string accoundid;
+        string[] items;
 
         public BewerkAccount()
         {
@@ -56,7 +57,7 @@ namespace Owl_learn_Blokboek5
             string info = null;
             info = await getinfo.Content.ReadAsStringAsync();
 
-            string[] items = info.Split('.').ToArray();
+            items = info.Split('.').ToArray();
             tbVoornaam.Text = items[0];
             tbAchternaam.Text = items[1];
             tbUsername.Text = items[2];
@@ -134,7 +135,7 @@ namespace Owl_learn_Blokboek5
             // \s - Stands for white space. The rest is for alphabets and numbers
             if (Regex.IsMatch(tbVoornaam.Text, @"^[\sa-zA-Z0-9]*$")) return;
 
-            tbVoornaam.Text = String.Empty;
+            tbVoornaam.Text = items[0];
             var dialog = new MessageDialog("Speciale tekens zijn niet toegestaan bij het invoeren van de voornaam", "Foutmelding");
             await dialog.ShowAsync();
         }
@@ -144,7 +145,7 @@ namespace Owl_learn_Blokboek5
             // \s - Stands for white space. The rest is for alphabets and numbers
             if (Regex.IsMatch(tbAchternaam.Text, @"^[\sa-zA-Z0-9]*$")) return;
 
-            tbAchternaam.Text = String.Empty;
+            tbAchternaam.Text = items[1];
             var dialog = new MessageDialog("Speciale tekens zijn niet toegestaan bij het invoeren van de achternaam", "Foutmelding");
             await dialog.ShowAsync();
         }
@@ -154,7 +155,7 @@ namespace Owl_learn_Blokboek5
             // \s - Stands for white space. The rest is for alphabets and numbers
             if (Regex.IsMatch(tbUsername.Text, @"^[\sa-zA-Z0-9]*$")) return;
 
-            tbUsername.Text = String.Empty;
+            tbUsername.Text = items[2];
             var dialog = new MessageDialog("Speciale tekens zijn niet toegestaan bij het invoeren van de gebruikersnaam", "Foutmelding");
             await dialog.ShowAsync();
         }

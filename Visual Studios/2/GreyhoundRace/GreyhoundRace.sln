@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreyhoundRace", "GreyhoundRace\GreyhoundRace.csproj", "{65AB7EE6-1592-42B9-9324-EDCA19D94B33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{9811D609-9913-4ED1-8429-D9903EDDD06F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{65AB7EE6-1592-42B9-9324-EDCA19D94B33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65AB7EE6-1592-42B9-9324-EDCA19D94B33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65AB7EE6-1592-42B9-9324-EDCA19D94B33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9811D609-9913-4ED1-8429-D9903EDDD06F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9811D609-9913-4ED1-8429-D9903EDDD06F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9811D609-9913-4ED1-8429-D9903EDDD06F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9811D609-9913-4ED1-8429-D9903EDDD06F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B301992-3F0D-4C53-BA0B-394D361F95CF}
 	EndGlobalSection
 EndGlobal

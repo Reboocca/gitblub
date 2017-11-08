@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExactXamarinGLAccount.GLAEdit"
+             Appearing="ContentPage_Appearing">
+    <ContentPage.Content>
+        <Grid BackgroundColor="LightGray">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="32"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="32"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Row="0" Grid.Column="1" x:Name="mijnImage" HorizontalOptions="Start" VerticalOptions="Center"  />
+            <Label Grid.Row="0" Grid.Column="2" TextColor="Gray" HorizontalTextAlignment="End"   VerticalTextAlignment="Center" FontSize="Small" Text="Developers portal"   />
+            <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" TextColor="Black" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="Medium" Text="AMJE's G/L Account Sample"  />
+
+            <Label Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="Start" Text="Code: " VerticalOptions="Center" TextColor="Black" FontSize="Medium" Margin="0,0,10,0"/>
+            <Entry Grid.Row="2" Grid.Column="2" x:Name="Code" HorizontalOptions="FillAndExpand" Text="(code)" VerticalOptions="Center" BackgroundColor="#FFEEEEEE" FontSize="Medium"  IsEnabled="False" />
+
+            <Label Grid.Row="3" Grid.Column="1" HorizontalTextAlignment="Start" Text="Description: " VerticalTextAlignment="Center" TextColor="Black" FontSize="Medium" Margin="0,0,10,0"/>
+            <Entry Grid.Row="3" Grid.Column="2" x:Name="Description"  HorizontalOptions="FillAndExpand" Text="(description)" VerticalOptions="Center" BackgroundColor="#FFEEEEEE" FontSize="Medium" />
+
+            <StackLayout Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2"  Orientation="Horizontal" Margin="0,16,0,0">
+                <Button  x:Name="Save"   Text="Save"   FontSize="Small" TextColor="Black" BorderColor="#FF424242" Clicked="Save_Click"/>
+                <Button  x:Name="Delete" Text="Delete" FontSize="Small" TextColor="Black" BorderColor="#FF424242" Clicked="Delete_Click" />
+                <Button  x:Name="New"    Text="New"    FontSize="Small" TextColor="Black" BorderColor="#FF424242" Clicked="New_Click" />
+                <Button  x:Name="Close"  Text="Close"  FontSize="Small" TextColor="Black" BorderColor="#FF424242" Clicked="Close_Click" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

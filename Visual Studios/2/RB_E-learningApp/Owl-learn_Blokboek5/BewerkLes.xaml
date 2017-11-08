@@ -59,7 +59,7 @@
                 <ListBox x:Name="lbVragen" Grid.Column="1" HorizontalAlignment="Center" Height="175" Grid.Row="3" VerticalAlignment="Top" Width="665" FontSize="14px" FontFamily="Calibri Light" Foreground="#FF191919" ItemsSource="{Binding Vraag}" SelectedValue="{Binding Omschrijving}" DisplayMemberPath="Omschrijving" SelectedValuePath="ID" Margin="0.333,0.667,47,0" Grid.ColumnSpan="2" />
                 <Button x:Name="btNieuw" Content="Nieuw vraag" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left" Width="250" Click="btNieuw_Click"/>
                 <Button x:Name="btVerwijder" Content="Verwijder vraag" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Right" Width="250" Click="btVerwijder_Click"/>
-                <TextBlock Grid.Column="1" Grid.Row="2" Text="Selecteer een lesonderwerp om deze te wijzigen of verwijderen. Wanneer u een lesonderwerp geselecteerd heeft, dan kunt u de lessen van het onderwerp inzien. " TextWrapping="Wrap" FontSize="14px" FontFamily="Calibri Light" Foreground="#FF191919" Margin="10.333,0.333,10,4.667" />
+                <TextBlock Grid.Column="1" Grid.Row="2" Text="Hieronder ziet u een lijst met de vragen die tot deze les behoren. U kunt nieuwe vragen toevoegen of deze verwijderen. Let op! Wanneer u op verijwderen klikt, kan deze actie niet ongedaan worden gemaakt, u zult de vraag opnieuw moeten toevoegen. " TextWrapping="Wrap" FontSize="14px" FontFamily="Calibri Light" Foreground="#FF191919" Margin="10.333,0.333,10,4.667" />
             </Grid>
         </Grid>
 

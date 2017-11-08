@@ -40,3 +40,4 @@ D:\School\Gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\obj\Debug\Greyhou
 D:\School\Gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\obj\Debug\GreyhoundRace.csproj.GenerateResource.Cache
 D:\School\Gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\obj\Debug\GreyhoundRace.exe
 D:\School\Gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\obj\Debug\GreyhoundRace.pdb
+D:\School\Gitblub\Visual Studios\2\GreyhoundRace\GreyhoundRace\obj\Debug\GreyhoundRace.csproj.CoreCompileInputs.cache

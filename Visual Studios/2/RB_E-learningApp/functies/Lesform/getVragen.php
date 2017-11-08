@@ -11,6 +11,6 @@
 
     $result = mysqli_query($conn, $sql);
     while ($rij = mysqli_fetch_array($result)) {
-        echo $rij["Vraag"].".".$rij["VraagID"].",";
+        echo $rij["Vraag"]."^".$rij["VraagID"]."]";
     }
 ?>

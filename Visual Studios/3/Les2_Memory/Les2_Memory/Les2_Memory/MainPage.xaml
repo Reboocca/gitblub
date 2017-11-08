@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Les2_Memory"
+             x:Class="Les2_Memory.MainPage">
+
+    <Grid x:Name="grGrid" BackgroundColor="#FAFAFA">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="lb" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Text="Overmemory" HorizontalTextAlignment="Center" FontSize="22" VerticalTextAlignment="Center" TextColor="#FAFAFA" BackgroundColor="#BF360C"/>
+        
+        <Image x:Name="i1" Grid.Column="1" Grid.Row="1" BackgroundColor="#AED581" ClassId="i1">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="CheckImages" NumberOfTapsRequired="1"/>
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Image x:Name="i2" Grid.Column="2" Grid.Row="1" BackgroundColor="#AED581" ClassId="i2">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="CheckImages" NumberOfTapsRequired="1"/>
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Image x:Name="i3" Grid.Column="3" Grid.Row="1" BackgroundColor="#AED581" ClassId="i3">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="CheckImages"/>
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Image x:Name="i4" Grid.Column="1" Grid.Row="2" BackgroundColor="#9CCC65" ClassId="i4">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="CheckImages"/>
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Image x:Name="i5" Grid.Column="2" Grid.Row="2" BackgroundColor="#9CCC65" ClassId="i5">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="CheckImages"/>
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Image x:Name="i6" Grid.Column="3" Grid.Row="2" BackgroundColor="#9CCC65" ClassId="i6">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="CheckImages"/>
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Image x:Name="i7" Grid.Column="1" Grid.Row="3" BackgroundColor="#8BC34A" ClassId="i7">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="CheckImages"/>
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Image x:Name="i8" Grid.Column="2" Grid.Row="3" BackgroundColor="#8BC34A" ClassId="i8">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="CheckImages"/>
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Image x:Name="i9" Grid.Column="3" Grid.Row="3" BackgroundColor="#8BC34A" ClassId="i9">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="CheckImages"/>
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Image x:Name="i10" Grid.Column="1" Grid.Row="4" BackgroundColor="#7CB342" ClassId="i10">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="CheckImages"/>
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Image x:Name="i11" Grid.Column="2" Grid.Row="4" BackgroundColor="#7CB342" ClassId="i11">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="CheckImages"/>
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Image x:Name="i12" Grid.Column="3" Grid.Row="4" BackgroundColor="#7CB342" ClassId="i12">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="CheckImages"/>
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Button x:Name="btn" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="3" Text="reset" BackgroundColor="#EEEEEE" TextColor="#212121" Clicked="btn_Clicked"/>
+    </Grid>
+
+
+
+
+</ContentPage>
